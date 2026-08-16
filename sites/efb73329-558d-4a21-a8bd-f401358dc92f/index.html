@@ -4,8 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ektorps Herrfrisering – Herrfrisör i Nacka/Ektorp</title>
-  <meta name="description" content="Ektorps Herrfrisering på Ektorpsvägen 6 i Nacka. Klippning, rakning, skäggtrimning och grooming för herrar. Öppet alla dagar. Ring 08-716 31 08 för att boka.">
+  <meta name="description" content="Ektorps Herrfrisering på Ektorpsvägen 6 i Nacka. Klippning, rakning, skäggtrimning och styling för herrar. Boka tid enkelt online.">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Ektorps Herrfrisering",
+    "url": "https://ektorpsherrfrisering.se/",
+    "telephone": "+4687163108",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ektorpsvägen 6",
+      "addressLocality": "Nacka",
+      "postalCode": "131 47",
+      "addressCountry": "SE"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "17:00"}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "98"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -13,11 +38,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <!--FIELD:company_name-->
-        <span class="logo-text">Ektorps Herrfrisering</span>
-        <!--/FIELD:company_name-->
+        <!--FIELD:company_name-->Ektorps Herrfrisering<!--/FIELD:company_name-->
       </div>
-      <nav class="main-nav" aria-label="Huvudmeny">
+      <nav class="main-nav" aria-label="Huvudnavigation">
         <button class="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -25,364 +48,359 @@
           <li><a href="#om">Om oss</a></li>
           <li><a href="#tjanster">Tjänster</a></li>
           <li><a href="#oppettider">Öppettider</a></li>
-          <li><a href="#boka">Boka</a></li>
-          <li><a href="#omdomen">Omdömen</a></li>
+          <li><a href="#recensioner">Recensioner</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
+          <li>
+            <!--FIELD:booking_url--><a href="https://ektorpsherrfrisering.se/booking/" class="nav-cta" target="_blank" rel="noopener">Boka tid</a><!--/FIELD:booking_url-->
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img
-        src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwaGFpciUyMHNhbG9uJTIwaW50ZXJpb3J8ZW58MHwwfHx8MTc4Njg5MzY5M3ww&ixlib=rb-4.1.0&q=80&w=1080"
-        alt="Salongsmiljö, herrfrisering"
-        class="hero-img"
-      >
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container hero-content">
-      <h1>Din herrfrisör i Ektorp</h1>
-      <p class="hero-sub">Klippning, rakning och skäggtrimning — utfört med omsorg, utan krångel. Välkommen till Ektorpsvägen 6 i Nacka.</p>
-      <div class="hero-cta-group">
-        <a href="#boka" class="btn btn-primary">Boka tid</a>
-        <!--FIELD:phone-->
-        <a href="tel:0871631 08" class="btn btn-secondary">Ring 08-716 31 08</a>
-        <!--/FIELD:phone-->
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwaGFpciUyMHNhbG9uJTIwaW50ZXJpb3J8ZW58MHwwfHx8MTc4Njg5MzY5M3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern salongsmiljö" class="hero-img">
+        <div class="hero-overlay"></div>
       </div>
-      <p class="hero-credit">Foto av <a href="https://unsplash.com/@gregtrow">Greg Trowman</a> på <a href="https://unsplash.com">Unsplash</a></p>
-    </div>
-  </section>
-
-  <!-- ===== OM OSS ===== -->
-  <section class="about section" id="om">
-    <div class="container about-inner">
-      <div class="about-text">
-        <h2>En riktig herrfrisering i Nacka</h2>
-        <p>Ektorps Herrfrisering har funnits i kvarteret länge nog för att känna igen folk på gatan. Det är ingen slump — det är resultatet av att göra jobbet ordentligt, gång på gång.</p>
-        <p>Här är det hantverk som gäller. Vi klipper, rakar och trimmar skägg med noggrannhet och utan stress. Du behöver inte förklara vad du vill ha en gång för mycket, och du lämnar inte stolen och undrar om det blivit rätt.</p>
-        <p>Salongen ligger på Ektorpsvägen 6 och är öppen alla veckodagar. Tar du dig hit vet du varför stamkunderna håller fast.</p>
+      <div class="container hero-content">
+        <h1>Din herrfrisör i Ektorp</h1>
+        <p class="hero-sub">Klippning, skäggtrimning och grooming — utan krångel. Vi känner igen dig när du kliver in.</p>
+        <div class="hero-actions">
+          <!--FIELD:booking_url--><a href="https://ektorpsherrfrisering.se/booking/" class="btn btn-primary" target="_blank" rel="noopener">Boka tid online</a><!--/FIELD:booking_url-->
+          <!--FIELD:phone--><a href="tel:0871631608" class="btn btn-secondary">Ring oss: 08-716 31 08</a><!--/FIELD:phone-->
+        </div>
+        <p class="hero-address"><!--FIELD:address-->Ektorpsvägen 6, 131 47 Nacka<!--/FIELD:address--></p>
       </div>
-      <div class="about-badge">
-        <!--FIELD:google_rating-->
-        <div class="rating-badge">
-          <span class="rating-stars" aria-label="4,5 av 5 stjärnor">★★★★½</span>
-          <span class="rating-score">4,5 / 5</span>
-          <span class="rating-count">98 Google-recensioner</span>
+      <p class="hero-photo-credit">Foto av <a href="https://unsplash.com/@gregtrow">Greg Trowman</a> på <a href="https://unsplash.com">Unsplash</a></p>
+    </section>
+
+    <!-- ===== OM OSS ===== -->
+    <section class="about section" id="om">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>En riktig herrfrisör i Nacka</h2>
+          <p>Ektorps Herrfrisering har sin hemvist på Ektorpsvägen 6 i Nacka. Här är det ingen onödig snack — du vet vad du får och vi vet vad vi gör. Oavsett om det är en skarp klippning, ren rakning eller en ordentlig skäggtrimning du är ute efter, tar vi tid på oss att göra jobbet rätt.</p>
+          <p>Vi tar emot herrar, barn och dam — men kärnan i det vi gör är herrfrisering med hantverksstolthet. Stamkunderna hittar alltid tillbaka, och det säger mer än någon reklamskylt.</p>
+          <p>Öppet alla veckans dagar. Kom in eller boka din tid direkt online.</p>
         </div>
-        <!--/FIELD:google_rating-->
+        <div class="about-badge">
+          <div class="badge-inner">
+            <span class="badge-icon">✂</span>
+            <span class="badge-label">Herrfrisör i Nacka</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== TJÄNSTER ===== -->
-  <section class="services section" id="tjanster">
-    <div class="container">
-      <h2>Vad vi gör</h2>
-      <p class="section-lead">Vi håller det enkelt: det som ska göras, görs rätt.</p>
+    <!-- ===== TJÄNSTER ===== -->
+    <section class="services section" id="tjanster">
+      <div class="container">
+        <h2>Våra tjänster</h2>
+        <p class="section-sub"><!--FIELD:services-->Klippning, rakning, styling, trimning, skäggtrimning, grooming, damfrisering och barnklippning — allt under samma tak.<!--/FIELD:services--></p>
 
-      <!--FIELD:services-->
-      <div class="cards-grid">
+        <div class="cards-grid">
 
-        <!-- Klippning -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <div class="card-no-img-placeholder"></div>
-              <div class="card-front-label">Klippning</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Klippning</h3>
-              <p>Herrklippning anpassad efter ditt hår, din stil och hur du faktiskt lever. Inget mer, inget mindre.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Klippning -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8aGFpciUyMHNhbG9uJTIwaGFpcmN1dCUyMHN0eWxpbmd8ZW58MHwwfDB8fHwxNzg2OTA2OTY2fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Klippning" class="card-img">
+                <div class="card-front-label">Klippning</div>
+              </div>
+              <div class="card-back">
+                <h3>Klippning</h3>
+                <p>En ordentlig klippning anpassad efter dig — oavsett om du vill ha kort och skarpt eller lite mer volym.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+                <p class="card-photo-credit">Foto av <a href="https://unsplash.com/@awcreativeut">Adam Winger</a> på <a href="https://unsplash.com">Unsplash</a></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Rakning -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <div class="card-no-img-placeholder"></div>
-              <div class="card-front-label">Rakning</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Rakning</h3>
-              <p>Klassisk rakning med rakkniv — den typ av service man inte hittar överallt längre.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Skäggtrimning -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8YmVhcmQlMjB0cmltJTIwYmFyYmVyJTIwc2hvcHxlbnwwfDB8fHwxNzg2ODkzNjkyfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Skäggtrimning" class="card-img">
+                <div class="card-front-label">Skäggtrimning</div>
+              </div>
+              <div class="card-back">
+                <h3>Skäggtrimning</h3>
+                <p>Skarp kontur eller naturlig form — vi trimmar och formsätter skägget så det sitter som det ska.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+                <p class="card-photo-credit">Foto av <a href="https://unsplash.com/@seteph">Allef Vinicius</a> på <a href="https://unsplash.com">Unsplash</a></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Styling -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <img
-                src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8aGFpciUyMHN0eWxpbmclMjBzYWxvbnxlbnwwfDB8fHwxNzg2ODkzNjkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Styling på salong"
-                class="card-img"
-              >
-              <div class="card-front-label">Styling</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Styling</h3>
-              <p>Vill du ha lite mer form och finish? Vi hjälper dig hitta en look som fungerar för dig i vardagen.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Styling -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8aGFpciUyMHN0eWxpbmclMjBzYWxvbnxlbnwwfDB8fHwxNzg2ODkzNjkxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Styling" class="card-img">
+                <div class="card-front-label">Styling</div>
+              </div>
+              <div class="card-back">
+                <h3>Styling</h3>
+                <p>Vi avslutar med rätt produkter och teknik så att håret håller formen — inte bara i spegeln på salongen.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+                <p class="card-photo-credit">Foto av <a href="https://unsplash.com/@lindsayrc81">Lindsay Cash</a> på <a href="https://unsplash.com">Unsplash</a></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Trimning -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <div class="card-no-img-placeholder"></div>
-              <div class="card-front-label">Trimning</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Trimning</h3>
-              <p>Snabb och noggrann trimning när det är dags att städa upp utan en full klippning.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Barnklippning -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front">
+                <img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8a2lkcyUyMGhhaXJjdXR8ZW58MHwwfHx8MTc4Njg5MzY5Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Barnklippning" class="card-img">
+                <div class="card-front-label">Barnklippning</div>
+              </div>
+              <div class="card-back">
+                <h3>Barnklippning</h3>
+                <p>Lugnt och tryggt för de minsta. Vi tar oss tid och ser till att även de yngsta kunderna lämnar nöjda.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+                <p class="card-photo-credit">Foto av <a href="https://unsplash.com/@tommyvankessel">Tommy van Kessel</a> på <a href="https://unsplash.com">Unsplash</a></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Skäggtrimning -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <img
-                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8YmVhcmQlMjB0cmltJTIwYmFyYmVyJTIwc2hvcHxlbnwwfDB8fHwxNzg2ODkzNjkyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Skäggtrimning hos barberare"
-                class="card-img"
-              >
-              <div class="card-front-label">Skäggtrimning</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Skäggtrimning</h3>
-              <p>Skägg som ser ut som om det är tänkt att se ut så. Vi konturerar, trimmar och finputsar.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Rakning -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front card-front--no-img">
+                <div class="card-icon-bg">
+                  <svg class="card-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="8" y="20" width="32" height="6" rx="3" fill="#F5F0EB" opacity="0.7"/>
+                    <rect x="18" y="8" width="12" height="12" rx="2" fill="#F5F0EB" opacity="0.5"/>
+                    <rect x="22" y="26" width="4" height="14" rx="2" fill="#F5F0EB" opacity="0.5"/>
+                  </svg>
+                </div>
+                <div class="card-front-label">Rakning</div>
+              </div>
+              <div class="card-back">
+                <h3>Rakning</h3>
+                <p>En klassisk ren rakning — noggrant utförd med omsorg om din hud.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Grooming -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <div class="card-no-img-placeholder"></div>
-              <div class="card-front-label">Grooming</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Grooming</h3>
-              <p>Komplett skötsel för den som vill ha mer — öron, näsa, ögonbryn. Detaljer som märks.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Grooming -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front card-front--no-img">
+                <div class="card-icon-bg">
+                  <svg class="card-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="24" cy="18" r="9" stroke="#F5F0EB" stroke-width="2.5" opacity="0.7"/>
+                    <path d="M15 38 Q24 30 33 38" stroke="#F5F0EB" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                  </svg>
+                </div>
+                <div class="card-front-label">Grooming</div>
+              </div>
+              <div class="card-back">
+                <h3>Grooming</h3>
+                <p>Helhetsbehandling för dig som vill se välvårdad ut — från topp till krage.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Damfrisering -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <div class="card-no-img-placeholder"></div>
-              <div class="card-front-label">Damfrisering</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Damfrisering</h3>
-              <p>Vi klipper även damer — ett uppskattat komplement för familjer i kvarteret.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Trimning -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front card-front--no-img">
+                <div class="card-icon-bg">
+                  <svg class="card-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <line x1="12" y1="36" x2="36" y2="12" stroke="#F5F0EB" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                    <circle cx="14" cy="34" r="5" stroke="#F5F0EB" stroke-width="2" opacity="0.6"/>
+                    <circle cx="34" cy="14" r="5" stroke="#F5F0EB" stroke-width="2" opacity="0.6"/>
+                  </svg>
+                </div>
+                <div class="card-front-label">Trimning</div>
+              </div>
+              <div class="card-back">
+                <h3>Trimning</h3>
+                <p>Snabb och precis trimning när det bara behövs lite underhåll mellan klippningarna.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Barnklippning -->
-        <div class="card-flip-wrapper" tabindex="0">
-          <div class="card-flip-inner">
-            <div class="card-face card-front">
-              <img
-                src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MDc1fDB8MXxzZWFyY2h8MXx8a2lkcyUyMGhhaXJjdXR8ZW58MHwwfHx8MTc4Njg5MzY5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Barnklippning"
-                class="card-img"
-              >
-              <div class="card-front-label">Barnklippning</div>
-            </div>
-            <div class="card-face card-back">
-              <h3>Barnklippning</h3>
-              <p>Tålmodigt och tryggt för de minsta. Barnen lämnar stolen nöjda — och det gör föräldrarna med.</p>
-              <!--FIELD:prices--><p class="price-placeholder">Företagets priser här</p><!--/FIELD:prices-->
+          <!-- Damfrisering -->
+          <div class="card-wrapper">
+            <div class="card" tabindex="0">
+              <div class="card-front card-front--no-img">
+                <div class="card-icon-bg">
+                  <svg class="card-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M24 8 Q34 16 30 28 Q24 36 18 28 Q14 16 24 8Z" stroke="#F5F0EB" stroke-width="2" fill="none" opacity="0.7"/>
+                    <line x1="24" y1="36" x2="24" y2="42" stroke="#F5F0EB" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+                  </svg>
+                </div>
+                <div class="card-front-label">Damfrisering</div>
+              </div>
+              <div class="card-back">
+                <h3>Damfrisering</h3>
+                <p>Vi tar även emot damer som vill ha en ordentlig klippning — välkommen in.</p>
+                <!--FIELD:prices--><span class="price-placeholder">Företagets priser här</span><!--/FIELD:prices-->
+              </div>
             </div>
           </div>
-        </div>
 
+        </div><!-- /.cards-grid -->
       </div>
-      <!--/FIELD:services-->
+    </section>
 
-      <div class="services-photo-credits">
-        <small>
-          Foto av <a href="https://unsplash.com/@lindsayrc81">Lindsay Cash</a> på <a href="https://unsplash.com">Unsplash</a> ·
-          Foto av <a href="https://unsplash.com/@seteph">Allef Vinicius</a> på <a href="https://unsplash.com">Unsplash</a> ·
-          Foto av <a href="https://unsplash.com/@tommyvankessel">Tommy van Kessel</a> på <a href="https://unsplash.com">Unsplash</a>
-        </small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ÖPPETTIDER ===== -->
-  <section class="hours section" id="oppettider">
-    <div class="container">
-      <h2>Öppettider</h2>
-      <!--FIELD:opening_hours-->
-      <table class="hours-table">
-        <tbody>
-          <tr><td>Måndag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Tisdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Onsdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Torsdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Fredag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Lördag</td><td>10:00 – 17:00</td></tr>
-          <tr><td>Söndag</td><td>10:00 – 17:00</td></tr>
-        </tbody>
-      </table>
-      <!--/FIELD:opening_hours-->
-    </div>
-  </section>
-
-  <!-- ===== BOKA TID / CTA ===== -->
-  <section class="booking section" id="boka">
-    <div class="container booking-inner">
-      <h2>Boka din tid</h2>
-      <p>Enkel bokning direkt via vår hemsida — välj dag, tid och behandling utan att behöva ringa runt.</p>
-      <!--FIELD:booking_url--><a href="https://ektorpsherrfrisering.se/booking/" target="_blank" rel="noopener">https://ektorpsherrfrisering.se/booking/</a><!--/FIELD:booking_url-->
-      <p class="booking-phone-cta">Föredrar du att ringa?
-        <!--FIELD:phone-->
-        <a href="tel:0871631 08" class="btn btn-secondary">08-716 31 08</a>
-        <!--/FIELD:phone-->
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== SOCIALT BEVIS / OMDÖMEN ===== -->
-  <section class="reviews section" id="omdomen">
-    <div class="container">
-      <h2>Vad kunderna säger</h2>
-      <!--FIELD:google_rating-->
-      <div class="reviews-rating-banner">
-        <span class="rating-stars large" aria-label="4,5 av 5 stjärnor">★★★★½</span>
-        <p><strong>4,5 av 5</strong> på Google — baserat på 98 recensioner</p>
-        <a href="https://www.google.com/maps/search/Ektorps+Herrfrisering" target="_blank" rel="noopener" class="btn btn-outline">Läs på Google Maps</a>
-      </div>
-      <!--/FIELD:google_rating-->
-      <div class="reviews-grid">
-        <blockquote class="review-card">
-          <p>"Har klippt mig här i flera år. Alltid ett bra resultat och trevligt bemötande. Rekommenderar varmt."</p>
-          <footer>— Google-recensent</footer>
-        </blockquote>
-        <blockquote class="review-card">
-          <p>"Bästa frisören i Nacka, utan tvekan. Snabb service och man vet vad man får. Stammis sedan länge."</p>
-          <footer>— Google-recensent</footer>
-        </blockquote>
-        <blockquote class="review-card">
-          <p>"Tog med min son för barnklippning. Lugnt och professionellt — han ville gå tillbaka direkt."</p>
-          <footer>— Google-recensent</footer>
-        </blockquote>
-      </div>
-      <p class="reviews-disclaimer"><small>Citaten ovan är illustrativa — läs de riktiga recensionerna direkt på Google Maps.</small></p>
-    </div>
-  </section>
-
-  <!-- ===== KONTAKT ===== -->
-  <section class="contact section" id="kontakt">
-    <div class="container contact-grid">
-
-      <div class="contact-info">
-        <h2>Hitta hit</h2>
-
-        <div class="contact-block">
-          <h3>Adress</h3>
-          <!--FIELD:address-->
-          <address>
-            Ektorpsvägen 6<br>
-            131 47 Nacka
-          </address>
-          <!--/FIELD:address-->
-        </div>
-
-        <div class="contact-block">
-          <h3>Telefon</h3>
-          <!--FIELD:phone-->
-          <a href="tel:0871631 08" class="contact-link">08-716 31 08</a>
-          <!--/FIELD:phone-->
-        </div>
-
-        <div class="contact-block">
-          <h3>E-post</h3>
-          <!--FIELD:email-->
-          <p>Kontakta oss via telefon eller besök oss i salongen — vi svarar dig direkt.</p>
-          <!--/FIELD:email-->
-        </div>
-
-        <div class="contact-block">
-          <h3>Hemsida</h3>
-          <!--FIELD:website-->
-          <a href="https://ektorpsherrfrisering.se/" class="contact-link">ektorpsherrfrisering.se</a>
-          <!--/FIELD:website-->
-        </div>
-
-        <div class="contact-block">
-          <h3>Sociala medier</h3>
-          <!--FIELD:instagram--><a href="https://www.instagram.com/ektorpsherr/" target="_blank" rel="noopener">https://www.instagram.com/ektorpsherr/</a><!--/FIELD:instagram-->
-          <!--FIELD:facebook--><a href="https://www.facebook.com/pages/Ektorps-Herrfrisering/131855820209013" target="_blank" rel="noopener">https://www.facebook.com/pages/Ektorps-Herrfrisering/131855820209013</a><!--/FIELD:facebook-->
-        </div>
-
-        <div class="contact-block">
-          <h3>Öppettider</h3>
+    <!-- ===== ÖPPETTIDER ===== -->
+    <section class="hours section" id="oppettider">
+      <div class="container">
+        <h2>Öppettider</h2>
+        <div class="hours-table-wrap">
           <!--FIELD:opening_hours-->
-          <ul class="hours-list-compact">
-            <li><span>Mån–Fre</span><span>10:00 – 19:00</span></li>
-            <li><span>Lör–Sön</span><span>10:00 – 17:00</span></li>
-          </ul>
+          <table class="hours-table">
+            <tbody>
+              <tr><th scope="row">Måndag</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Tisdag</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Onsdag</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Torsdag</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Fredag</th><td>10:00 – 19:00</td></tr>
+              <tr><th scope="row">Lördag</th><td>10:00 – 17:00</td></tr>
+              <tr><th scope="row">Söndag</th><td>10:00 – 17:00</td></tr>
+            </tbody>
+          </table>
           <!--/FIELD:opening_hours-->
         </div>
       </div>
+    </section>
 
-      <div class="contact-map">
-        <!--FIELD:address-->
-        <iframe
-          title="Karta till Ektorps Herrfrisering"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=18.18,59.30,18.22,59.32&amp;layer=mapnik&amp;marker=59.308,18.200"
-          width="100%"
-          height="360"
-          style="border:0;"
-          loading="lazy"
-          aria-label="Karta som visar Ektorpsvägen 6, Nacka"
-        ></iframe>
-        <!--/FIELD:address-->
+    <!-- ===== BOKA TID / CTA ===== -->
+    <section class="booking section" id="boka">
+      <div class="container booking-inner">
+        <h2>Boka din tid</h2>
+        <p>Välj tid som passar dig — vi har öppet alla veckans dagar. Bokar du online slipper du vänta.</p>
+        <div class="booking-actions">
+          <!--FIELD:booking_url-->
+          <a href="https://ektorpsherrfrisering.se/booking/" class="btn btn-primary btn-large" target="_blank" rel="noopener">Boka tid online</a>
+          <!--/FIELD:booking_url-->
+          <!--FIELD:phone-->
+          <a href="tel:0871631608" class="btn btn-secondary btn-large">Ring 08-716 31 08</a>
+          <!--/FIELD:phone-->
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ===== RECENSIONER ===== -->
+    <section class="reviews section" id="recensioner">
+      <div class="container">
+        <h2>Vad kunderna tycker</h2>
+        <!--FIELD:google_rating-->
+        <div class="rating-block">
+          <div class="rating-stars" aria-label="4,5 av 5 stjärnor">★★★★<span class="half-star">★</span></div>
+          <p class="rating-score">4,5 / 5</p>
+          <p class="rating-count">Baserat på 98 recensioner på Google</p>
+          <a href="https://www.google.com/maps/search/Ektorps+Herrfrisering+Nacka" class="btn btn-outline" target="_blank" rel="noopener">Läs recensionerna på Google Maps</a>
+        </div>
+        <!--/FIELD:google_rating-->
+      </div>
+    </section>
+
+    <!-- ===== KONTAKT ===== -->
+    <section class="contact section" id="kontakt">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <h2>Hitta oss</h2>
+
+          <div class="contact-item">
+            <span class="contact-label">Adress</span>
+            <!--FIELD:address-->
+            <address>
+              Ektorpsvägen 6<br>
+              131 47 Nacka
+            </address>
+            <!--/FIELD:address-->
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Telefon</span>
+            <!--FIELD:phone-->
+            <a href="tel:0871631608" class="contact-link">08-716 31 08</a>
+            <!--/FIELD:phone-->
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">E-post</span>
+            <!--FIELD:email-->
+            <span class="contact-note">Kontakta oss via telefon eller bokningsformuläret för snabbast svar.</span>
+            <!--/FIELD:email-->
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Öppettider</span>
+            <!--FIELD:opening_hours-->
+            <ul class="hours-compact">
+              <li><span>Mån–Fre</span><span>10:00 – 19:00</span></li>
+              <li><span>Lör–Sön</span><span>10:00 – 17:00</span></li>
+            </ul>
+            <!--/FIELD:opening_hours-->
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Sociala medier</span>
+            <div class="social-links">
+              <!--FIELD:instagram-->
+              <a href="https://www.instagram.com/ektorpsherr/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+                Instagram
+              </a>
+              <!--/FIELD:instagram-->
+              <!--FIELD:facebook-->
+              <a href="https://www.facebook.com/pages/Ektorps-Herrfrisering/131855820209013" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><path d="M15 8h-2a1 1 0 0 0-1 1v2h3l-.5 3H12v6h-3v-6H7v-3h2V9a4 4 0 0 1 4-4h2v3z" fill="currentColor"/></svg>
+                Facebook
+              </a>
+              <!--/FIELD:facebook-->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-map">
+          <!--FIELD:address-->
+          <iframe
+            title="Karta till Ektorps Herrfrisering"
+            src="https://www.google.com/maps?q=Ektorpsv%C3%A4gen+6%2C+131+47+Nacka&output=embed"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <!--/FIELD:address-->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>
-        <!--FIELD:company_name-->Ektorps Herrfrisering<!--/FIELD:company_name-->
-        &nbsp;·&nbsp;
-        <!--FIELD:address-->Ektorpsvägen 6, 131 47 Nacka<!--/FIELD:address-->
-        &nbsp;·&nbsp;
-        <!--FIELD:phone--><a href="tel:0871631 08">08-716 31 08</a><!--/FIELD:phone-->
+      <p class="footer-name"><!--FIELD:company_name-->Ektorps Herrfrisering<!--/FIELD:company_name--> &mdash; <!--FIELD:address-->Ektorpsvägen 6, 131 47 Nacka<!--/FIELD:address--></p>
+      <p class="footer-phone"><!--FIELD:phone--><a href="tel:0871631608">08-716 31 08</a><!--/FIELD:phone--></p>
+      <p class="photo-credits">
+        Foto av <a href="https://unsplash.com/@gregtrow" target="_blank" rel="noopener">Greg Trowman</a>,
+        <a href="https://unsplash.com/@awcreativeut" target="_blank" rel="noopener">Adam Winger</a>,
+        <a href="https://unsplash.com/@seteph" target="_blank" rel="noopener">Allef Vinicius</a>,
+        <a href="https://unsplash.com/@lindsayrc81" target="_blank" rel="noopener">Lindsay Cash</a>,
+        <a href="https://unsplash.com/@tommyvankessel" target="_blank" rel="noopener">Tommy van Kessel</a>
+        på <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.
       </p>
-      <p class="footer-credits">
-        Foto av <a href="https://unsplash.com/@gregtrow">Greg Trowman</a> på <a href="https://unsplash.com">Unsplash</a> ·
-        Foto av <a href="https://unsplash.com/@lindsayrc81">Lindsay Cash</a> på <a href="https://unsplash.com">Unsplash</a> ·
-        Foto av <a href="https://unsplash.com/@seteph">Allef Vinicius</a> på <a href="https://unsplash.com">Unsplash</a> ·
-        Foto av <a href="https://unsplash.com/@tommyvankessel">Tommy van Kessel</a> på <a href="https://unsplash.com">Unsplash</a>
-      </p>
-      <p class="footer-copy">&copy; 2026 Ektorps Herrfrisering</p>
     </div>
   </footer>
 
