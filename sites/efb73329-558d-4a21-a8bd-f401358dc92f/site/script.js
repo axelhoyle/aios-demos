@@ -1,59 +1,42 @@
-// ===========================
 // Mobile nav toggle
-// ===========================
-(function () {
-  var toggle = document.querySelector('.nav-toggle');
-  var navList = document.querySelector('.nav-list');
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
 
-  if (!toggle || !navList) return;
-
-  toggle.addEventListener('click', function () {
-    var isOpen = navList.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+if (navToggle && navList) {
+  navToggle.addEventListener('click', function () {
+    const isOpen = navList.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close on link click
+  // Close nav on link click
   navList.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       navList.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
-})();
+}
 
-// ===========================
-// Touch/tap flip for service cards (mobile — no hover)
-// ===========================
-(function () {
-  var cards = document.querySelectorAll('.card-flip-wrapper');
-
-  cards.forEach(function (card) {
-    // Keyboard: Enter / Space toggles flip
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
+// Mobile card flip (tap to toggle)
+if (window.matchMedia('(hover: none)').matches || window.innerWidth <= 480) {
+  document.querySelectorAll('.card').forEach(function (card) {
+    if (window.innerWidth > 480) {
+      card.addEventListener('click', function () {
         card.classList.toggle('flipped');
-      }
-    });
-
-    // Touch: toggle on tap only on touch devices
-    var touchMoved = false;
-
-    card.addEventListener('touchstart', function () {
-      touchMoved = false;
-    }, { passive: true });
-
-    card.addEventListener('touchmove', function () {
-      touchMoved = true;
-    }, { passive: true });
-
-    card.addEventListener('touchend', function (e) {
-      if (!touchMoved) {
-        e.preventDefault();
-        card.classList.toggle('flipped');
-      }
-    });
+      });
+    }
   });
-})();
+}
+
+// Re-evaluate on resize
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 480) {
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        card.classList.toggle('flipped');
+      });
+    });
+  }
+});
