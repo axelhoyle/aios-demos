@@ -158,12 +158,6 @@
   .signature-text {
     display: block;
     font: inherit;
-    /* Padding lives HERE, not on .signature-wrap — background-clip:text
-       paints relative to this element's own box, so the safety margin for
-       the script font's swashes/ascenders (L's tail, d's loop) has to be
-       part of the box the gradient is actually sized against. Padding on
-       the parent only repositions this box, it doesn't enlarge what the
-       gradient covers. */
     padding: 0.35em 0.5em 0.08em 0.5em;
     text-align: center;
     background-image: linear-gradient(90deg,
@@ -440,7 +434,7 @@
       <a class="nav-link" href="#omdomen">Omdömen</a>
       <a class="nav-link" href="#besok">Besök</a>
     </div>
-    <a class="btn-book" href="#boka">Boka tid</a>
+    <!--FIELD:booking_url--><a class="btn-book" href="#boka">Boka tid</a><!--/FIELD:booking_url-->
   </nav>
 </header>
 
@@ -596,16 +590,16 @@
       <div class="visit-grid">
         <div class="visit-block reveal reveal-left">
           <h3>Adress</h3>
-          <address>Rådjursvägen 4<br>114 42 Östermalm, Stockholm</address>
-          <p style="margin-top:1.2rem;">08-611 22 30<br>boka@salonglund.se</p>
+          <!--FIELD:address--><address>Rådjursvägen 4<br>114 42 Östermalm, Stockholm</address><!--/FIELD:address-->
+          <p style="margin-top:1.2rem;"><!--FIELD:phone-->08-611 22 30<!--/FIELD:phone--><br><!--FIELD:email-->boka@salonglund.se<!--/FIELD:email--></p>
         </div>
         <div class="visit-block reveal reveal-right" style="--reveal-delay:0.1s;">
           <h3>Öppettider</h3>
-          <table class="hours-table">
+          <!--FIELD:opening_hours--><table class="hours-table">
             <tr><td>Tisdag–Fredag</td><td>10:00–19:00</td></tr>
-            <tr><td>Lördag</td><td>10:00–15:00</td></tr>
-            <tr><td>Söndag–Måndag</td><td>Stängt</td></tr>
-          </table>
+            <tr><td>Lördag–Söndag</td><td>Stängt</td></tr>
+            <tr><td>Måndag</td><td>Stängt</td></tr>
+          </table><!--/FIELD:opening_hours-->
         </div>
       </div>
     </div>
@@ -779,8 +773,8 @@
       { time: '14:30', open: false }, { time: '16:00', open: true }, { time: '17:30', open: false }
     ] },
     { label: 'Lördag', date: '30/8', slots: [
-      { time: '10:00', open: false }, { time: '11:00', open: true }, { time: '12:00', open: false },
-      { time: '13:00', open: true }, { time: '14:00', open: false }
+      { time: '10:00', open: false }, { time: '11:00', open: false }, { time: '12:00', open: false },
+      { time: '13:00', open: false }, { time: '14:00', open: false }
     ] }
   ];
 
@@ -867,10 +861,6 @@
     var count = Math.round(W / 34);
     for (var i = 0; i < count; i++) {
       var baseX = (i / count) * W * 1.1 - W * 0.05;
-      // Phase is mostly driven by x-position (a smooth sweep across the
-      // width) with only a small random offset per strand — neighbors then
-      // sway together like combed hair, instead of each strand jittering on
-      // its own unrelated cycle, which read as scratchy static.
       var sweepPhase = (baseX / W) * Math.PI * 1.6;
       strands.push({
         x: baseX,
@@ -890,9 +880,6 @@
       var steps = 40;
       for (var i = 0; i <= steps; i++) {
         var yT = i / steps, y = yT * H;
-        // Amplitude eases in near the top instead of starting at a fixed
-        // point — the strand still reads as one continuous flowing line
-        // rather than fanning out from an anchor.
         var envelope = Math.min(1, yT * 2.5);
         var sway = Math.sin(yT * Math.PI * s.freq + s.phase + t * s.speed) * s.amp * envelope;
         var x = s.x + sway;
