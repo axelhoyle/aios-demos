@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="light">
+<head>
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme');
+      if(t) document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidan hittades inte – Annikas Klipperia AB</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: var(--bg);
+    }
+    .error-num {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 600;
+      color: var(--accent);
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: -1rem;
+    }
+    .error-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .error-text {
+      color: var(--ink-faint);
+      max-width: 40ch;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .error-logo { margin-bottom: 2.5rem; }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="skip-link">Hoppa till innehåll</a>
+  <main id="main">
+    <div class="error-page">
+      <a href="index.html" class="error-logo logo-link">
+        <img src="logo.jpg" alt="Annikas Klipperia AB" class="site-logo">
+      </a>
+      <div class="error-num">404</div>
+      <h1 class="error-title">Den här sidan finns inte</h1>
+      <p class="error-text">Det verkar som att sidan du letade efter har flyttat eller aldrig funnits. Inga problem — vi visar dig rätt väg.</p>
+      <a href="index.html" class="btn btn-primary">Tillbaka till startsidan</a>
+    </div>
+  </main>
+</body>
+</html>
