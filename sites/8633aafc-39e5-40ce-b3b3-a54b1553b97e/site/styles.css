@@ -1,0 +1,337 @@
+/* ============================================================
+   Pure Mei — styles.css
+   Palett bygger på verifierad visual_identity:
+   Cream Parchment bas, Charcoal text, Slate Blue-Grey accent
+   ============================================================ */
+
+@font-face {
+  font-family: 'Italiana';
+  src: url('italiana-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Karla';
+  src: url('karla-latin.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+/* ---- Custom properties ---- */
+:root {
+  --paper:       #F5EDD9;   /* Cream Parchment — bas/bakgrund */
+  --paper-alt:   #FAFAF7;   /* Warm White — kortytor */
+  --ink:         #3D3D3D;   /* Charcoal — primär text */
+  --ink-faint:   #736B5E;   /* Dämpad brun-grå — sekundär text/linjer */
+  --accent:      #8FA3A8;   /* Slate Blue-Grey — accent */
+  --accent-deep: #5C7A80;   /* Mörkare teal för kontrast på små ytor */
+  --accent-2:    #6B8B8F;   /* Slate Green — damask-detalj */
+  --accent-text: #4A6C72;   /* Läsbar accent för liten text */
+  --border:      rgba(143, 163, 168, 0.35);
+  --font-head:   'Italiana', Georgia, serif;
+  --font-body:   'Karla', -apple-system, sans-serif;
+  --radius:      0;
+  --section-pad: clamp(3.5rem, 8vw, 6rem);
+  --inner-max:   72rem;
+}
+
+/* ---- Reset & base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+}
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--paper);
+  position: relative;
+}
+
+/* site-kit.css handles .hero-frame, .site-header, .hero-text layout.
+   We only set colours / fonts via custom properties above. */
+
+/* Nav link styled as accent button */
+.btn-nav {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-nav:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+/* Logo image */
+.site-logo img {
+  max-height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* ============================================================
+   BUTTONS (global)
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ============================================================
+   SECTIONS — shared
+   ============================================================ */
+.section {
+  padding: var(--section-pad) 1.25rem;
+}
+.section:nth-child(even) {
+  background-color: var(--paper-alt);
+}
+.section-inner {
+  max-width: var(--inner-max);
+  margin: 0 auto;
+}
+.section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0.35rem;
+  color: var(--ink);
+}
+.section-lead {
+  color: var(--ink-faint);
+  margin-bottom: 2.5rem;
+  font-size: 0.97rem;
+}
+
+/* thin hairline dividers between alternating sections */
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+#om-oss {
+  background-color: var(--paper-alt);
+}
+
+/* ============================================================
+   SERVICES / PRICE LIST
+   ============================================================ */
+#tjanster {
+  background-color: var(--paper);
+}
+
+/* site-kit.css handles .menu-groups, .menu-group, .price-item etc. */
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.section-cta {
+  background-color: #4A6268; /* deep teal, warm charcoal-teal — not pure black */
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.section-cta h2,
+.section-cta p {
+  color: #F5EDD9;
+}
+.section-cta h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.4rem;
+}
+.section-cta p {
+  font-size: 0.93rem;
+  margin-bottom: 1.75rem;
+  opacity: 0.82;
+}
+.cta-inner {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+.section-cta .btn-primary {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.section-cta .btn-primary:hover {
+  background: transparent;
+  color: var(--paper);
+}
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+#omdomen {
+  background-color: var(--paper-alt);
+}
+
+/* ============================================================
+   VISIT BLOCK (öppettider + hitta hit — hanteras av site-kit)
+   ============================================================ */
+#oppettider {
+  background-color: var(--paper);
+}
+
+/* ============================================================
+   FAQ / BRA ATT VETA
+   ============================================================ */
+#bra-att-veta {
+  background-color: var(--paper-alt);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background-color: #3D3D3D; /* Charcoal — varm kolgrå, inte ren svart */
+  color: var(--paper);
+  padding: 3rem 1.25rem 1.5rem;
+}
+.footer-inner {
+  max-width: var(--inner-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(245,237,217,0.15);
+}
+.footer-brand,
+.footer-contact,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.footer-name {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+.footer-address,
+.footer-hours-note {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.footer-contact a {
+  font-size: 0.88rem;
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-contact a:hover { opacity: 1; }
+.footer-bottom {
+  max-width: var(--inner-max);
+  margin: 1.25rem auto 0;
+  font-size: 0.78rem;
+  opacity: 0.45;
+  text-align: center;
+}
+
+/* ============================================================
+   REVEAL (scroll fade-in — site-kit.js handles the logic)
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  :root {
+    --section-pad: 2.5rem;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
