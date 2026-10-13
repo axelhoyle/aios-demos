@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidan hittades inte — Pure Mei</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="site-kit.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.25rem;
+      background: var(--paper);
+    }
+    .error-page .error-logo {
+      margin-bottom: 2.5rem;
+    }
+    .error-page .error-logo img {
+      max-height: 44px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .error-page h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .error-page p {
+      color: var(--ink-faint);
+      font-size: 0.97rem;
+      max-width: 30rem;
+      margin: 0 auto 2rem;
+    }
+    .error-hairline {
+      width: 3rem;
+      height: 1px;
+      background: var(--accent);
+      margin: 1.25rem auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-logo">
+      <a href="index.html"><img src="logo.png" alt="Pure Mei"></a>
+    </div>
+    <h1>Sidan finns inte</h1>
+    <div class="error-hairline"></div>
+    <p>Det verkar som att sidan du letade efter har flyttats eller inte längre finns. Gå tillbaka så hjälper vi dig vidare.</p>
+    <a href="index.html" class="btn btn-primary">Till startsidan</a>
+  </div>
+</body>
+</html>
